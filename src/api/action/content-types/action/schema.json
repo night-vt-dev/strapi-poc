@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "actions",
+  "info": {
+    "singularName": "action",
+    "pluralName": "actions",
+    "displayName": "Action"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "idCode": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

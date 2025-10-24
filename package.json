@@ -1,0 +1,21 @@
+{
+  "name": "strapi-poc",
+  "private": true,
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build"
+  },
+  "dependencies": {
+    "@strapi/strapi": "4.25.5",
+    "@strapi/plugin-users-permissions": "4.25.5",
+    "@strapi/plugin-upload": "4.25.5",
+    "pg": "^8.11.3",
+    "mysql2": "^3.11.0",
+    "strapi-provider-upload-aws-s3": "^3.6.8"
+  }
+}
