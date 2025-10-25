@@ -786,6 +786,9 @@ export interface ApiPagePage extends Schema.CollectionType {
     slug: Attribute.UID<'api::page.page', 'title'> & Attribute.Required;
     layout: Attribute.Enumeration<['default', 'landing', 'caseStudy']> &
       Attribute.DefaultTo<'default'>;
+    mount: Attribute.Enumeration<['root', 'pages']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'pages'>;
     sections: Attribute.DynamicZone<['blocks.section']> &
       Attribute.SetMinMax<
         {
