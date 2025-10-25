@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_blocks_section",
+  "info": { "displayName": "Section", "icon": "align-justify" },
+  "attributes": {
+    "title":    { "type": "string", "required": true },
+    "subtitle": { "type": "string" },
+    "content":  { "type": "text" }     
+  }
+}

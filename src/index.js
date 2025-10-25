@@ -1,6 +1,12 @@
 module.exports = {
   register() {},
   bootstrap({ strapi }) {
+
+    const uids = Object.keys(strapi.contentTypes || {});
+    strapi.log.info('Loaded CT UIDs: ' + uids.join(', '));
+
+    const services = Object.keys(strapi.services || {});
+    strapi.log.info('Loaded Service UIDs: ' + services.join(', '));
     const ping = async (model, event) => {
       try {
         const url = process.env.REVALIDATE_URL;

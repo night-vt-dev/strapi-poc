@@ -1,35 +1,18 @@
 {
   "kind": "collectionType",
   "collectionName": "pages",
-  "info": {
-    "singularName": "page",
-    "pluralName": "pages",
-    "displayName": "Page"
-  },
-  "options": {
-    "draftAndPublish": true
-  },
+  "info": { "singularName": "page", "pluralName": "pages", "displayName": "Page" },
+  "options": { "draftAndPublish": true },
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title",
-      "required": true
-    },
-    "layout": {
-      "type": "enumeration",
-      "enum": [
-        "default",
-        "landing",
-        "caseStudy"
-      ],
-      "default": "default"
-    },
-    "blocks": {
-      "type": "json"
+    "title":  { "type": "string", "required": true },
+    "slug":   { "type": "uid", "targetField": "title", "required": true },
+    "layout": { "type": "enumeration", "enum": ["default","landing","caseStudy"], "default": "default" },
+
+    "sections": {
+      "type": "dynamiczone",
+      "components": ["blocks.section"],
+      "min": 1,
+      "max": 3
     }
   }
 }
