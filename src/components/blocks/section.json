@@ -1,9 +1,34 @@
 {
   "collectionName": "components_blocks_section",
-  "info": { "displayName": "Section", "icon": "align-justify" },
+  "info": {
+    "displayName": "Section",
+    "icon": "align-justify",
+    "description": ""
+  },
   "attributes": {
-    "title":    { "type": "string", "required": true },
-    "subtitle": { "type": "string" },
-    "content":  { "type": "text" }     
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "markdown": {
+      "type": "richtext"
+    }
   }
 }

@@ -777,6 +777,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     singularName: 'page';
     pluralName: 'pages';
     displayName: 'Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -789,7 +790,9 @@ export interface ApiPagePage extends Schema.CollectionType {
     mount: Attribute.Enumeration<['root', 'pages']> &
       Attribute.Required &
       Attribute.DefaultTo<'pages'>;
-    sections: Attribute.DynamicZone<['blocks.section']> &
+    sections: Attribute.DynamicZone<
+      ['blocks.section', 'blocks.section-with-image']
+    > &
       Attribute.SetMinMax<
         {
           min: 1;
